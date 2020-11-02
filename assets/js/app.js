@@ -1,10 +1,11 @@
+
 var leftPage = pdfjsLib.getDocument('./[MS] Chapitre 1 FR.pdf');
 
-leftPage.promise.then(function(pdf) {
+leftPage.promise.then(async function(pdf) {
     let pageNum = 1;
-    function renderR (num) {
+    async function renderR (num) {
         pdf.getPage(num).then(function (page) {
-            var scale = 1.5;
+            var scale = 1;
             var viewport = page.getViewport({scale: scale,});
 
             var canvas = document.getElementById('page1');
@@ -20,37 +21,50 @@ leftPage.promise.then(function(pdf) {
         });
     }
 
-    function onPrevPage() {
+    async function onPrevPage() {
         if (pageNum <= 1) {
             return;
         }
         pageNum = pageNum - 2;
-        renderR(pageNum);
+        await renderR(pageNum);
     }
     document.getElementById('prev').addEventListener('click', onPrevPage);
 
     /**
      * Displays next page.
      */
-    function onNextPage() {
+    async function onNextPage() {
         if (pageNum >= pdf.numPages) {
             return;
         }
         pageNum = pageNum + 2;
-        renderR(pageNum);
+        await renderR(pageNum);
     }
     document.getElementById('next').addEventListener('click', onNextPage);
 
-    renderR(pageNum)
+    document.body.addEventListener('keydown', function(event)
+    {
+        const key = event.key;
+        switch (key) {
+            case "ArrowLeft":
+                onPrevPage()
+                break;
+            case "ArrowRight":
+                onNextPage()
+                break
+        }
+    });
+
+    await renderR(pageNum)
 });
 
 var rightPage = pdfjsLib.getDocument('./[MS] Chapitre 1 FR.pdf');
 
-rightPage.promise.then(function(pdf) {
+rightPage.promise.then(async function(pdf) {
     let pageNum = 2;
-    function renderR (num) {
+    async function renderR (num) {
         pdf.getPage(num).then(function (page) {
-            var scale = 1.5;
+            var scale = 1;
             var viewport = page.getViewport({scale: scale,});
 
             var canvas = document.getElementById('page2');
@@ -67,30 +81,40 @@ rightPage.promise.then(function(pdf) {
         });
     }
 
-    function onPrevPage() {
+    async function onPrevPage() {
         if (pageNum <= 1) {
             return;
         }
         pageNum = pageNum - 2;
-        renderR(pageNum);
+        await renderR(pageNum);
     }
     document.getElementById('prev').addEventListener('click', onPrevPage);
 
     /**
      * Displays next page.
      */
-    function onNextPage() {
+    async function onNextPage() {
         if (pageNum >= pdf.numPages) {
             return;
         }
         pageNum = pageNum + 2;
-        renderR(pageNum);
+        await renderR(pageNum);
     }
     document.getElementById('next').addEventListener('click', onNextPage);
 
-    renderR(pageNum)
+    document.body.addEventListener('keydown', function(event)
+    {
+        const key = event.key;
+        switch (key) {
+            case "ArrowLeft":
+                onPrevPage()
+                break;
+            case "ArrowRight":
+                onNextPage()
+                break
+        }
+    });
+
+    await renderR(pageNum)
 });
-
-
-
 
