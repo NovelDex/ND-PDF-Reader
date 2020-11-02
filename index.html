@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pdf-Reader</title>
+    <script src="assets/js/pdf.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+</head>
+<body>
+
+<button id="prev">Previous</button>
+<button id="next">Next</button>
+
+<div id="pdf-reader">
+    <canvas id="page1"></canvas>
+    <canvas id="page2"></canvas>
+</div>
+
+<script>
+    var heightOutput;
+    var widthOutput;
+
+    function resize() {
+        heightOutput = window.innerHeight;
+        widthOutput = window.innerWidth;
+        console.log(heightOutput + "x" + widthOutput)
+    }
+
+    window.onresize = resize;
+</script>
+</body>
+</html>
