@@ -1,44 +1,76 @@
+let leftPage = pdfjsLib.getDocument('./[MS] Chapitre 1 FR.pdf');
 
-var leftPage = pdfjsLib.getDocument('./[MS] Chapitre 1 FR.pdf');
-
-leftPage.promise.then(async function(pdf) {
+leftPage.promise.then(function(pdf) {
+    let thePDF = pdf
     let pageNum = 1;
-    async function renderR (num) {
-        pdf.getPage(num).then(function (page) {
-            var scale = 1;
-            var viewport = page.getViewport({scale: scale,});
 
-            var canvas = document.getElementById('page1');
-            var context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            var renderContext = {
-                canvasContext: context,
-                viewport: viewport
-            };
+    function renderR (num) {
+        pdf.getPage(num).then(handlePages);
+    }
+    renderR(pageNum)
 
-            page.render(renderContext);
-        });
+    function handlePages(page)
+    {
+        //This gives us the page's dimensions at full scale
+        let viewport = page.getViewport({scale: 1,});
+        let element = document.getElementById("pdf-reader")
+
+        //We'll create a canvas for each page to draw it on
+        let canvas = document.createElement("canvas");
+        let context = canvas.getContext('2d');
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        //Draw it on the canvas
+        page.render({canvasContext: context, viewport: viewport});
+
+        //Add it to the web page
+        element.appendChild(canvas);
+
+        function getCount(parent){
+            var relevantChildren = 0;
+            var children = parent.childNodes.length;
+            for(var i=0; i < children; i++){
+                if(parent.childNodes[i].nodeType != 3){
+                    relevantChildren++;
+                }
+            }
+            return relevantChildren;
+        }
+
+        //Move to next page
+        if (getCount(element) < 2)
+        {
+            pageNum++;
+            thePDF.getPage(pageNum).then(handlePages);
+        }
     }
 
-    async function onPrevPage() {
-        if (pageNum <= 1) {
+    function onPrevPage() {
+        if (pageNum <= 3) {
             return;
         }
-        pageNum = pageNum - 2;
-        await renderR(pageNum);
+        pageNum = pageNum - 3;
+        let myNode = document.getElementById("pdf-reader");
+        myNode.innerHTML = '';
+
+        renderR(pageNum);
     }
     document.getElementById('prev').addEventListener('click', onPrevPage);
 
     /**
      * Displays next page.
      */
-    async function onNextPage() {
+    function onNextPage() {
         if (pageNum >= pdf.numPages) {
             return;
         }
-        pageNum = pageNum + 2;
-        await renderR(pageNum);
+        pageNum = pageNum + 1;
+
+        let myNode = document.getElementById("pdf-reader");
+        myNode.innerHTML = '';
+
+        renderR(pageNum);
     }
     document.getElementById('next').addEventListener('click', onNextPage);
 
@@ -54,67 +86,4 @@ leftPage.promise.then(async function(pdf) {
                 break
         }
     });
-
-    await renderR(pageNum)
 });
-
-var rightPage = pdfjsLib.getDocument('./[MS] Chapitre 1 FR.pdf');
-
-rightPage.promise.then(async function(pdf) {
-    let pageNum = 2;
-    async function renderR (num) {
-        pdf.getPage(num).then(function (page) {
-            var scale = 1;
-            var viewport = page.getViewport({scale: scale,});
-
-            var canvas = document.getElementById('page2');
-            var context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-            var renderContext = {
-                canvasContext: context,
-                viewport: viewport
-            };
-
-            page.render(renderContext);
-
-        });
-    }
-
-    async function onPrevPage() {
-        if (pageNum <= 1) {
-            return;
-        }
-        pageNum = pageNum - 2;
-        await renderR(pageNum);
-    }
-    document.getElementById('prev').addEventListener('click', onPrevPage);
-
-    /**
-     * Displays next page.
-     */
-    async function onNextPage() {
-        if (pageNum >= pdf.numPages) {
-            return;
-        }
-        pageNum = pageNum + 2;
-        await renderR(pageNum);
-    }
-    document.getElementById('next').addEventListener('click', onNextPage);
-
-    document.body.addEventListener('keydown', function(event)
-    {
-        const key = event.key;
-        switch (key) {
-            case "ArrowLeft":
-                onPrevPage()
-                break;
-            case "ArrowRight":
-                onNextPage()
-                break
-        }
-    });
-
-    await renderR(pageNum)
-});
-
