@@ -3,9 +3,14 @@ let leftPage = pdfjsLib.getDocument('./[MS] Chapitre 1 FR.pdf');
 leftPage.promise.then(function(pdf) {
     let thePDF = pdf
     let pageNum = 1;
+    let vPage = 2;
+    let winHeight;
+    let winWidht;
+    let res;
 
-    function renderR (num) {
-        pdf.getPage(num).then(handlePages);
+
+    function renderR (num, res) {
+        pdf.getPage(num).then(function (page) { handlePages(page) });
     }
     renderR(pageNum)
 
@@ -13,6 +18,7 @@ leftPage.promise.then(function(pdf) {
     {
         //This gives us the page's dimensions at full scale
         let viewport = page.getViewport({scale: 1,});
+        viewport = page.getViewport({scale: window.innerHeight/viewport.height})
         let element = document.getElementById("pdf-reader")
 
         //We'll create a canvas for each page to draw it on
@@ -21,6 +27,12 @@ leftPage.promise.then(function(pdf) {
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
+/*        if (canvas.width > canvas.height) {
+            vPage = 1;
+            page.render({canvasContext: context, viewport: viewport});
+            return element.appendChild(canvas);
+        }*/
+
         //Draw it on the canvas
         page.render({canvasContext: context, viewport: viewport});
 
@@ -28,9 +40,9 @@ leftPage.promise.then(function(pdf) {
         element.appendChild(canvas);
 
         function getCount(parent){
-            var relevantChildren = 0;
-            var children = parent.childNodes.length;
-            for(var i=0; i < children; i++){
+            let relevantChildren = 0;
+            let children = parent.childNodes.length;
+            for(let i=0; i < children; i++){
                 if(parent.childNodes[i].nodeType != 3){
                     relevantChildren++;
                 }
@@ -47,10 +59,14 @@ leftPage.promise.then(function(pdf) {
     }
 
     function onPrevPage() {
-        if (pageNum <= 3) {
+        if (pageNum <= 3 && vPage === 2) {
+            return;
+        } else if (pageNum <= 1 && vPage === 1) {
             return;
         }
-        pageNum = pageNum - 3;
+
+        //(vPage === 2) ? pageNum = pageNum - 3 : pageNum = pageNum - 2;
+
         let myNode = document.getElementById("pdf-reader");
         myNode.innerHTML = '';
 
@@ -67,8 +83,8 @@ leftPage.promise.then(function(pdf) {
         }
         pageNum = pageNum + 1;
 
-        let myNode = document.getElementById("pdf-reader");
-        myNode.innerHTML = '';
+        let element = document.getElementById("pdf-reader");
+        element.innerHTML = '';
 
         renderR(pageNum);
     }
@@ -86,4 +102,17 @@ leftPage.promise.then(function(pdf) {
                 break
         }
     });
+
+    function resize () {
+        winHeight = window.innerHeight
+        winWidht = window.innerWidth
+
+        let element = document.getElementById("pdf-reader");
+        element.innerHTML = '';
+
+        if (winWidht > winHeight) return res = "phone";
+        if (winHeight> winWidht) return res = "desktop";
+    }
+
+    window.onresize = resize;
 });
