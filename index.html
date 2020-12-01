@@ -11,14 +11,17 @@
 <button id="prev">Previous</button>
 <button id="next">Next</button>
 
-<div id="pdf-reader">
+<div id="pdf-reader" style="display: flex; justify-content: center;">
+</div>
+
+<div id="page-list" class="page-list" style="display: flex; width: 100%;">
 </div>
 
 <script>
-let h;
-let w;
+    let h;
+    let w;
 
-    function resize () {
+    function resize() {
         h = window.innerHeight
         w = window.innerWidth
 

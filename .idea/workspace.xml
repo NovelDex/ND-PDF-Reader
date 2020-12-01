@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92c1b0bd-4a4d-4391-9526-0480f55f81c4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/js/reader_double_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -52,6 +53,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -60,7 +62,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Fake-pdf-viewer/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="31529282-8b25-400c-879d-96ce7808a971" uri="http://localhost:63342/Fake-pdf-viewer/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -95,7 +97,8 @@
       <workItem from="1604950875626" duration="1432000" />
       <workItem from="1605391379960" duration="2469000" />
       <workItem from="1605472849787" duration="203000" />
-      <workItem from="1606078976113" duration="10000" />
+      <workItem from="1606078976113" duration="638000" />
+      <workItem from="1606776225276" duration="5834000" />
     </task>
     <servers />
   </component>
@@ -113,11 +116,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="616" y="240" key="run.anything.popup" timestamp="1604098456253">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.88.1440.860@0.0.1920.1040" timestamp="1604098456253" />
   </component>
 </project>
