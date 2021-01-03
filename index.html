@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Pdf-Reader</title>
+    <link rel="stylesheet" href="assets/css/app.css">
     <script src="assets/js/pdf.js"></script>
     <script src="assets/js/app.js"></script>
 </head>
 <body>
 
-<button id="prev">Previous</button>
+<div class="main">
+    <nav></nav>
+    <div class="app">
+        <div id="progressRead" class="progressRead"></div>
+        <div class="mainAppPlayer">
+            <div id="pdfReader" class="pdfReader">
+                <div id="pdf-reader" style="display: flex; justify-content: center;"></div>
+            </div>
+            <div id="data" class="data"></div>
+        </div>
+    </div>
+</div>
+
+<!--<button id="prev">Previous</button>
 <button id="next">Next</button>
 
-<div id="pdf-reader" style="display: flex; justify-content: center;">
-</div>
-
 <div id="page-list" class="page-list" style="display: flex; width: 100%;">
-</div>
+</div>-->
+
 
 <script>
     let h;

@@ -1,0 +1,41 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #976bcf;
+    width: 100%;
+    height: 5vh;
+}
+
+div.progressRead {
+    border-radius: 0;
+    background-color: #736cd4;
+    width: 0;
+    height: 1vh;
+    transition: all .5s linear;
+}
+
+.mainAppPlayer {
+    width: 100%;
+    height: 94vh;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.pdfReader {
+    background-color: red;
+    width: 80%;
+    height: 100%;
+}
+
+.data {
+    background-color: blue;
+    width: 20%;
+    height: 100%;
+}
+
+

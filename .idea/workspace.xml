@@ -20,7 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92c1b0bd-4a4d-4391-9526-0480f55f81c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/reader_double_page.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -35,6 +36,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -50,10 +52,12 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -62,7 +66,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="31529282-8b25-400c-879d-96ce7808a971" uri="http://localhost:63342/Fake-pdf-viewer/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" engineId="a81cdfe2-cc9f-478d-b11d-9ab409f67fa6" uri="http://localhost:63342/Fake-pdf-viewer/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -99,6 +103,17 @@
       <workItem from="1605472849787" duration="203000" />
       <workItem from="1606078976113" duration="638000" />
       <workItem from="1606776225276" duration="5834000" />
+      <workItem from="1607637315520" duration="95000" />
+      <workItem from="1607637421241" duration="464000" />
+      <workItem from="1607637900065" duration="1243000" />
+      <workItem from="1607640236996" duration="554000" />
+      <workItem from="1607640810768" duration="66000" />
+      <workItem from="1608210149247" duration="918000" />
+      <workItem from="1608212735168" duration="7594000" />
+      <workItem from="1608238841712" duration="34000" />
+      <workItem from="1609365083834" duration="1795000" />
+      <workItem from="1609682039507" duration="776000" />
+      <workItem from="1609690179517" duration="9808000" />
     </task>
     <servers />
   </component>
