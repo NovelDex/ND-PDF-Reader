@@ -73,7 +73,7 @@ leftPage.promise.then(function(pdf) {
 
         renderR(pageNum);
     }
-    document.getElementById('prev').addEventListener('click', onPrevPage);
+    //document.getElementById('prev').addEventListener('click', onPrevPage);
 
     /**
      * Displays next page.
@@ -89,7 +89,7 @@ leftPage.promise.then(function(pdf) {
 
         renderR(pageNum);
     }
-    document.getElementById('next').addEventListener('click', onNextPage);
+    //document.getElementById('next').addEventListener('click', onNextPage);
 
     document.body.addEventListener('keydown', function(event)
     {

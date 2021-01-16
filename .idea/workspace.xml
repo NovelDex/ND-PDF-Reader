@@ -20,10 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92c1b0bd-4a4d-4391-9526-0480f55f81c4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Fake-pdf-viewer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Fake-pdf-viewer.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/reader_double_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/reader_double_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +63,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Labs\Fake-pdf-viewer\assets\js" />
       <recent name="D:\Labs\Fake-pdf-viewer\assets" />
     </key>
   </component>
@@ -113,7 +115,9 @@
       <workItem from="1608238841712" duration="34000" />
       <workItem from="1609365083834" duration="1795000" />
       <workItem from="1609682039507" duration="776000" />
-      <workItem from="1609690179517" duration="9808000" />
+      <workItem from="1609690179517" duration="10489000" />
+      <workItem from="1610139834650" duration="10260000" />
+      <workItem from="1610568402848" duration="3462000" />
     </task>
     <servers />
   </component>

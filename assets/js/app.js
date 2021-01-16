@@ -31,7 +31,6 @@ Reader.promise.then(function (pdf) {
         pageNum = pageNum - 1;
 
         let myNode = document.getElementById("pdf-reader");
-        myNode.innerHTML = '';
 
         renderR(pageNum);
     }
@@ -48,7 +47,6 @@ Reader.promise.then(function (pdf) {
         pageNum = pageNum + 1;
 
         let myNode = document.getElementById("pdf-reader");
-        myNode.innerHTML = '';
 
         renderR(pageNum);
     }
@@ -69,18 +67,15 @@ Reader.promise.then(function (pdf) {
 
     renderR(pageNum)
 
-    /*let pageList = document.getElementById("page-list")
+    let pageList = document.getElementById("novelPageList")
     for (let i = 0; i < pdf._pdfInfo.numPages; i++) {
         let pages = document.createElement('div')
-        pages.style.textAlign = "center"
-        pages.style.backgroundColor = "red"
-        pages.style.border = "solid 1px green"
-        pages.style.flex = "1"
-        pages.innerHTML = `${i + 1}`
+        pages.classList.add("novelPage")
+        pages.innerHTML = `Page : ${i + 1}`
         pages.onclick = function () {
             pageNum = i + 1
             renderR(pageNum)
         }
         pageList.appendChild(pages)
-    }*/
+    }
 });
