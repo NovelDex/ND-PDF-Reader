@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92c1b0bd-4a4d-4391-9526-0480f55f81c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Fake-pdf-viewer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Fake-pdf-viewer.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/reader_double_page.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/reader_double_page.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +49,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -118,6 +117,8 @@
       <workItem from="1609690179517" duration="10489000" />
       <workItem from="1610139834650" duration="10260000" />
       <workItem from="1610568402848" duration="3462000" />
+      <workItem from="1613414400959" duration="1217000" />
+      <workItem from="1613422831958" duration="1030000" />
     </task>
     <servers />
   </component>
